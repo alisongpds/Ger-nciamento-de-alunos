@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <section> 
+        {% with messages = get_flashed_messages() %} 
+        {% if messages %} 
+        <ul id="messages" class="list-unstyled"> 
+            {% for message in messages %} 
+            <li class="alert alert-success">{{ message }}</li> 
+            {% endfor %} 
+        </ul> 
+        {% endif %} 
+        {% endwith %} 
+    </section>
+    <section class="container">
+        <h1>Faça seu login</h1>
+        <form method="POST" action="{{ url_for('autenticar') }}">
+            <input type="hidden" name="proxima" value="{{ proxima or url_for('home') }}">
+            <p><label>Email:</label> <input class="form-control" type="text" name="email" required></p>
+            <p><label>Senha:</label> <input class="form-control" type="password" name="senha" required></p>
+            <p><button type="submit">Entrar</button></p>
+        </form>
+    </section>
+</body>
+</html>

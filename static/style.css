@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan&display=swap');
+
+* {
+    font-family: 'Kodchasan', sans-serif;
+    color: #000000;
+}
+
+html {
+    background-image: url("./background1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formularioPrincipal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.formularioCadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.formBanner {
+    background-color: #595959;
+    border-radius: 16px 16px 0px 0px;
+    display: flex;
+    padding: 1rem 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.formBanner__cadastro {
+    background-color: #595959;
+    border-radius: 16px 16px 0px 0px;
+    display: flex;
+    padding: 1rem 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 17.5vw;
+}
+
+.formBanner__title{
+    color: #F9F9F9;
+}
+
+.formButton {
+    display: flex;
+    padding: 1rem 0rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fff;
+    height: 10vh;
+    width: 17.5vw;
+    border-radius: 0 0 16px 16px;
+}
+
+.formulario__botao {
+    background-color: #595959;
+    border-radius: 16px;
+    width: 10vw;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1rem;
+    border-style: none;
+    color: #F9F9F9;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    height: 30vh;
+    width: 19.2vw;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.formulario>input{
+    border: 0.5px solid #595959;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+}
+
+.formulario__titulo {
+    font-size: 1.2rem;
+    color: black;
+}
