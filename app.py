@@ -80,4 +80,26 @@ def home_logged():
     else:
         return render_template('home_logado.html')
 
+@app.route('/cadastro_aluno')
+def cadastro_aluno():
+    if 'usuario_logado' not in session or session['usuario_logado'] == None: 
+         return redirect(url_for('login', proxima=url_for('cadastro_aluno'))) 
+    else:
+        return render_template('cadastro_aluno.html')
+    
+@app.route('/cadastrar_aluno',methods=['POST','GET'],)
+
+def cadastrar_aluno():
+    nome = request.form['nome']
+    ra = request.form['ra']
+    curso = request.form['curso']
+
+    # Insere os dados na tabela de usuários
+    cursor.execute('''
+        INSERT INTO aluno (nome,ra,curso)
+        VALUES (?,?,?)
+    ''', (nome,ra,curso)) 
+    db.commit()
+    return redirect(url_for('home_logged'))
+
 app.run(debug=True)

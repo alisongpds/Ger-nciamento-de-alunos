@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <section>
+        <form action="{{ url_for('cadastrar_aluno') }}" method="post">
+            <label class="formulario__titulo">Nome:</label>
+            <input name="nome" type="nome" class="" placeholder="nomecompleto" required>
+            <label class="formulario__titulo">Ra:</label>
+            <input name="ra" type="text" class="" placeholder="digiteseura" required>
+            <label class="formulario__titulo">Curso:</label>
+            <select name="curso" id="cursos" name="Selecione o curso">
+                <option selected>Selecione seu curso</option>
+                <option value="CC">Ciências da Computação</option>
+                <option value="SI">Sistema de Informação</option>
+                <option value="SF">Segurança da informação</option>
+            </select>
+            <button type="submit" class="formulario__botao">Cadastre-se</button>
+        </form>
+    </section>
+</body>
+</html>
