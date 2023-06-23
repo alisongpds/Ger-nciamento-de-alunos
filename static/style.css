@@ -93,7 +93,19 @@ html {
     padding: 1rem;
 }
 
+.formulario__dados{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .formulario>input{
+    border: 0.5px solid #595959;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+}
+
+.form-control{
     border: 0.5px solid #595959;
     padding: 0.5rem 1rem;
     border-radius: 1rem;
@@ -102,4 +114,71 @@ html {
 .formulario__titulo {
     font-size: 1.2rem;
     color: black;
+}
+
+
+/* Página Logada */
+
+.bannerLogada{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.bannerLogada__title {
+    background-color: #595959;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 40vw;
+    padding: 2rem 2rem;
+    border-radius: 16px 16px 0px 0px;
+}
+
+.bannerLogada__conteudo{
+    color: #FFF;
+    font-size: 1.5rem;
+}
+
+.bannerAluno{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 20vh;
+    width: 40vw;
+    padding: 2rem 2rem;    
+    background: #F5F5F5;
+}
+
+.formAluno{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cadastroAluno{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.ca__banner{
+    background: #595959;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    border-radius: 16px 16px 0 0;
+}
+
+.ca__b--titulo{
+    color: #F5F5F5;
 }

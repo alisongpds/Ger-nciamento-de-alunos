@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registro Escolar - Login</title>
+    <link rel="icon" href="/static/co_present.png">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
     <section> 
@@ -17,13 +19,17 @@
         {% endif %} 
         {% endwith %} 
     </section>
-    <section class="container">
-        <h1>Faça seu login</h1>
-        <form method="POST" action="{{ url_for('autenticar') }}">
+    <section class="formularioPrincipal">
+        <section class="formBanner__cadastro">
+            <img src="/static/co_present.png" alt="" class="formBanner_image">
+            <h1 class="formBanner__title">Bem-vindo!</h1>
+        </section>
+     
+        <form method="POST" action="{{ url_for('autenticar') }}" class="formulario">
             <input type="hidden" name="proxima" value="{{ proxima or url_for('home') }}">
-            <p><label>Email:</label> <input class="form-control" type="text" name="email" required></p>
-            <p><label>Senha:</label> <input class="form-control" type="password" name="senha" required></p>
-            <p><button type="submit">Entrar</button></p>
+            <p class="formulario__dados"><label>Email</label> <input class="form-control" type="text" name="email" required></p>
+            <p class="formulario__dados"><label>Senha</label> <input class="form-control" type="password" name="senha" required></p>
+            <p><button type="submit" class="formulario__botao">Login</button></p>
         </form>
     </section>
 </body>

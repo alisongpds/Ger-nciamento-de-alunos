@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Registro Escolar - Cadastro</title>
+    <link rel="icon" href="/static/co_present.png">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
+
 <body>
-    <section>
-        <form action="{{ url_for('cadastrar_aluno') }}" method="post">
-            <label class="formulario__titulo">Nome:</label>
-            <input name="nome" type="nome" class="" placeholder="nomecompleto" required>
-            <label class="formulario__titulo">Ra:</label>
-            <input name="ra" type="text" class="" placeholder="digiteseura" required>
-            <label class="formulario__titulo">Curso:</label>
-            <select name="curso" id="cursos" name="Selecione o curso">
-                <option selected>Selecione seu curso</option>
-                <option value="CC">Ciências da Computação</option>
-                <option value="SI">Sistema de Informação</option>
-                <option value="SF">Segurança da informação</option>
-            </select>
-            <button type="submit" class="formulario__botao">Cadastre-se</button>
-        </form>
-    </section>
+    <main>
+        <section class="cadastroAluno">
+            <section class="ca__banner">
+                <img src="/static/co_present.png" alt="">
+                <h1 class="ca__b--titulo">Insira os dados do aluno</h1>
+            </section>
+            <form action="{{ url_for('cadastrar_aluno') }}" method="post" class="cadastroAluno">
+                <label class="formulario__titulo">Nome:</label>
+                <input name="nome" type="nome" class="" placeholder="nomecompleto" required>
+                <label class="formulario__titulo">Ra:</label>
+                <input name="ra" type="text" class="" placeholder="digiteseura" required>
+                <label class="formulario__titulo">Curso:</label>
+                <select name="curso" id="cursos" name="Selecione o curso">
+                    <option selected>Selecione seu curso</option>
+                    <option value="CC">Ciências da Computação</option>
+                    <option value="SI">Sistema de Informação</option>
+                    <option value="SF">Segurança da informação</option>
+                </select>
+                <button type="submit" class="formulario__botao">Cadastre-se</button>
+            </form>
+        </section>
+    </main>
 </body>
+
 </html>
